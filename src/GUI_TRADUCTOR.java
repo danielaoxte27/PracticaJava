@@ -13,6 +13,7 @@ public class GUI_TRADUCTOR extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField text_español;
+	//PRUEBA PARA VER SI LA GUI SE SUBIO CORRECTAMENTE
 
 	/**
 	 * Launch the application.
