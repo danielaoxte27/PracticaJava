@@ -9,6 +9,7 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
 
 public class GUI_TRADUCTOR extends JFrame {
 
@@ -18,6 +19,8 @@ public class GUI_TRADUCTOR extends JFrame {
 	//PRUEBA PARA VER SI LA GUI SE SUBIO CORRECTAMENTE
 	MANEJA_PALABRAS traductor = new MANEJA_PALABRAS();
 	private JLabel lbl_ingles;
+	private JLabel lbl_imagen;
+	
 
 	/**
 	 * Launch the application.
@@ -83,6 +86,20 @@ public class GUI_TRADUCTOR extends JFrame {
 		JButton btn_imagen = new JButton("MOSTRAR IMAGEN RELACIONADA");
 		btn_imagen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				String palabra = text_español.getText().toLowerCase();
+				
+				if (palabra.equals("perro")) {
+		            lbl_imagen.setIcon(new ImageIcon("src/imagenes/PERRO80.jpg"));
+		        } 
+		        else if (palabra.equals("gato")) {
+		            lbl_imagen.setIcon(new ImageIcon("src/imagenes/GATO80.jpg"));
+		        } 
+		        else if (palabra.equals("elefante")) {
+		            lbl_imagen.setIcon(new ImageIcon("src/imagenes/ELEFANTE80.jpg"));
+		        } 
+		        else {
+		            lbl_imagen.setText("IMAGEN NO ENCONTRADA");
+		        }
 			}
 		});
 		btn_imagen.setBounds(23, 135, 321, 20);
