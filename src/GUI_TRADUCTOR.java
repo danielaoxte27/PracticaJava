@@ -16,6 +16,8 @@ public class GUI_TRADUCTOR extends JFrame {
 	private JPanel contentPane;
 	private JTextField text_español;
 	//PRUEBA PARA VER SI LA GUI SE SUBIO CORRECTAMENTE
+	MANEJA_PALABRAS traductor = new MANEJA_PALABRAS();
+	private JLabel lbl_ingles;
 
 	/**
 	 * Launch the application.
@@ -65,6 +67,10 @@ public class GUI_TRADUCTOR extends JFrame {
 		JButton btn_ingles = new JButton("TRADUCIR AL INGLES");
 		btn_ingles.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+				String palabra = text_español.getText();
+		        String resultado = traductor.traducir(palabra);
+		        lbl_ingles.setText(resultado);
 			}
 		});
 		btn_ingles.setBounds(179, 85, 165, 20);
