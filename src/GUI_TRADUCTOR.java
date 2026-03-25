@@ -7,6 +7,8 @@ import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class GUI_TRADUCTOR extends JFrame {
 
@@ -61,6 +63,10 @@ public class GUI_TRADUCTOR extends JFrame {
 		contentPane.add(lbl_ingles);
 		
 		JButton btn_ingles = new JButton("TRADUCIR AL INGLES");
+		btn_ingles.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btn_ingles.setBounds(179, 85, 165, 20);
 		contentPane.add(btn_ingles);
 		
@@ -69,6 +75,10 @@ public class GUI_TRADUCTOR extends JFrame {
 		contentPane.add(lbl_imagen);
 		
 		JButton btn_imagen = new JButton("MOSTRAR IMAGEN RELACIONADA");
+		btn_imagen.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btn_imagen.setBounds(23, 135, 321, 20);
 		contentPane.add(btn_imagen);
 
